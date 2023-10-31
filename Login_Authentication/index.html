@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="passord length should be minimum 8 characters" name="password" required>
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            // Here, we're just doing a basic check for the sake of this example.
+            if (username === "username" && password === "password") {
+                alert("Login successful!");
+            } else {
+                alert("Login failed. Please check your username and password.");
+            }
+        });
+    </script>
+</body>
+</html>
